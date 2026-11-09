@@ -2,13 +2,17 @@
 use super::*;
 use std::sync::atomic::Ordering;
 const API_BASE: &str = "https://taxi.nihao.io.vn";
+const SCUM_DEV_API_KEY: &str = "scum_dev_YpTwCknkS7rpXoNvLbmxIMtue6RTOMMtGUkTFj-MpXo";
 
 
 fn developer_key() -> Result<String, String> {
-    std::env::var("SCUM_DEV_API_KEY")
-        .ok()
-        .filter(|k| !k.trim().is_empty())
-        .ok_or_else(|| "Thiếu SCUM_DEV_API_KEY. Cấu hình key qua môi trường hoặc gateway.".to_string())
+    let key = SCUM_DEV_API_KEY.trim();
+
+    if key.is_empty() {
+        return Err("SCUM Dev API Key đang trống".to_string());
+    }
+
+    Ok(key.to_string())
 }
 fn client() -> Result<reqwest::Client, String> {
     reqwest::Client::builder().timeout(Duration::from_secs(10)).build().map_err(|e| e.to_string())
