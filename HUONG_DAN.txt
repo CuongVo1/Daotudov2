@@ -1,0 +1,13 @@
+SCUM UNIVERSAL MINIMAP HUB - SOURCE BUILD (THU NGHIEM)
+
+Day la ma nguon ung dung ALL-IN-ONE dua tren SCUM Walker, KHONG phai launcher chon EXE.
+Khong can nhap IP server. Chua kiem thu tren Windows/SCUM.
+
+CACH TAO EXE: 
+A) Dua toan bo thu muc nay len GitHub repository rieng; tab Actions -> Build Windows Installer -> Run workflow. Tai artifact Windows sau khi build thanh cong.
+B) Tren Windows: cai Rust + Microsoft C++ Build Tools + WebView2, chay BUILD_WINDOWS.bat.
+
+SU DUNG: mo app, mo SCUM, bat Live Tracking; chuot phai ban do de dat waypoint; AltGr+M de mo overlay; F8 de tam dung.
+
+CHU Y: Theo doi vi tri dung co che goc SCUM Walker; khong bao dam tren moi server hay moi phien ban game. Khong su dung binary HELL BOUND hay pha co che khoa.
+Ma nguon goc: https://github.com/HellBz/SCUM-Walker (MIT; xem src-tauri/LICENSE.txt).

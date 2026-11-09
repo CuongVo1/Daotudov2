@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <title>Đảo Tự Do — SCUM MiniMap</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAIpElEQVR4nMVXaWxc1RX+zr3vzbxZvY/XeLxkcWwS6hjslCQYKAWaVpAizBbBX9QNlaoSov2RSu2PSv1RiXSBH1ULKqVlWAqFJgioGCDC2YkTO3bi2B7HjuNlZuzxjGfmLfdWd2KnAUIUkKBHek+ac+8757vnfOecO8BXJwSAA2D4Pwi7zG/6qp27KhvWdFWHwy2XrNGXi6K7W0M0anvLw+3hcPmzHq9xTS6btzPZ7BuM6JHREyemvywA1NHRoR0+fNiCP9zSdX3F+1zzlBPcDqSghVSaZTKZ/dbCws1XIgTvVif4fLmi5bDKgnNv7bWbO0Nvbt1SWW64bNsyHW47DkmQFQj4uxzDuPuzACi9E41GbSLIZSB82cGl36yAI/T0cOVYPRJ1ntLw2h/fctOq97s6K+pt27HzJnFd5zKXN8ngFvMYbsG5ft3lACidQFn4Zl61ukdKf7kCogAp42pNAerp6VGA5K5du9R+iUjEkYBR1rz+5a5tVX13ban7bVGJK+AxmJNKWVouBxADpGPJaxv8yGRNpjGW/Vh4ldFIJOKUNrb88J5ttbubq3zYPxifPjaaejmZNt9JjA69snrDhprh48cn1P7Ozs7ggQMHUsWN63YWefUdjSFPM2m8HUIisWja3K2xG7rKaC6ew5kzDmUtKTfUQGqc05tHpqeLDe32SwEwAoR0h5p23LZm8Gf3reHJlOk4EvpTe8YxNp2BxtEfT5nFli2eJYJbgnY0VnomhKTNxQG3696t1Xjm7ZhTXm3Q5Hmb2aZLXrNBg2kK9J3IQyObHtxaLl46uMgS8+mF83OzTSq3Benu7mbRaFSUVpU8cOfXa/QTYynrpX1Tes50pKaR094c5N/cVNn26xdO4aFv1D/hcXH8/b0J3Lm5umkhY+Lo8Lz91J5RsiX4xjqf9AcseXJogQKBcqlxhnQ2jp1bq+XQVE5OJ5ZyGjnPpSYmkhcBrEjAxxvSWYF9/bP41nUh+cbBWZrPmNpUYgGprC18Lo4zE4uO16ORoRF7ff85mcnZrKrOy5nlImZqMr1oIlTpQTZnYzyWAbkIN6wrRlWpW7xyaBEc1szpY32PKu5cJGE0FFIEA9fw/O5XTy9tbilhjAjHJ20ZrvCivaUYZ1M5xn2MHT27qL/bF9fcJRqDW+MCfiotcVNzo0fWhxkCARfSaRsNYb+cz1g4dzpNOzor8VJvXGoa51KIfQXi9vTw/1VBJOKoAh7pG/hPSUAfb6kL8voKr/jB7SHctblSzsznAMcLl2YgENDBeABBvws1VR74AxIeQ0Oo0o36ei9sR8JrcEzP5mAvOfR4T7PceywpZheJUsn4C0um+SiwS/mUH6/pQgwqqkJFrjpdI6WhLa2lRCA4gAwGJIqKGOpqPSgtt1Bc7EJ1tYGOTX54fQWykZkX8Hk4puM5DJ6Yx2PbG+WRkUUMTHH4PZxnTfPFqVOn5rq73y2Uu3YpAKFeOivzGZqPEaQQkrKmg9SSBZfB6dqWgDRNCZWbigoDti2gyoSIIISASpnhZXRqdBEL5/P4+T1r5PBUBq8dWnQ4kyKRTO7xA6+p0EcjEdVbsBIBWn3HHbpyyop9168K+YhzRWhAYySX8g6pIpWSSAipQixNU0gpL/RdpXPprBDDgx8lYCwBv7h/nRydzuDFg0tWSbFfOz8987dY6OR329vbbUQi6qwF0VY63/DevXkARW31wSc61xbLXM5RfaHgIJO3wblKREFxYYQqPIpIUpLH4Dg3k8X4SJpuu6YCt22qwJ5D0/Ta4ZTw+3yuubk5kxGeRhR2BJFCB70UgGhoXx92lujmIr/2/Ue2N64t82lOJu8sR4eQyTmScyKhPF78VCooUtOZ7BuYJ79D+Ol3msG5xO7XY2Is6bIMt1s/MxZ7i6T81eTwcO/KjLm07LXGtrbryaInbULDfd3hqo0Nfms+Y2vq+IrN6rjpvAN/QJe6rnjKSK0pII4j6dDRODbVBOW922oQPZGgPUcXRSovmc+w3fHkAhhjvzk7OPheR0eHXpiQnxANkn7JGP1jYvD47ndrfWPhcldleZEhGAPzexiWcg5OTaZBfk6z57PStIRkRFRV6cH4ZAZbwsW4e2sN/vL2JD48YznCsXlqPnFwxrLf0Rk7fnZo6C01vKLR6KecFwBIkm8LSY+v2bhROx5Lzf9z/0zdgzdWW+mcw44Mz2PgXBoWA8rcXBoGBytwDbLvZJJaQ37cc2OdfPGDSTow6jjCzvHZePKVVaUlO3t7e7MrM2Z5ml5WSL3C69u+x3V+L4QYcAQCzdX+h4QmnGCZm1WFDAR8emGzYvsF1gNHDsfx2LebkLds+t3eWSdvSzZ1fvqDIOe3DgwMmMshF5/M+adTACB2sv+PANSjhAtq69iyubK1ttKwhQTP5VUburDo9WrYd2Aat64tR225B0//e0y6jIA0FxeElDimnF8p5JcFgAuXC7T293NlwM45Dw8OLXwICOb3acLj1hjXCG4Xw/6jcawu8mB7VxU+Gk7g+IQFIZOUyea5rhfM0cpcuRqhT2kUmEjECTWu29nYVPTXcNgLt4tUo6OxWAa1Hhce2d6IbN7C7/ecQ54Ccmx83HZs519OUfChid7e3LKlqwJBV7pOh8JrHqhvLPqDWyefAeLdbeV0y9cqkEzl8ed3JjGWYALC4sn51LxIL1bHYrHcss2rjgC7rDYatVtbW10zsdPPj4wuPLcq6NN/cmezvbWtBAeHEtj9xiSSdhBWPiNn4skkBH4Ui8XyBeCfw/lnR2BlrbubV01OlpQGfU82VfnuB9OtRJZrwWAAZi5rj09O67aZv2lscDC6fGu+IuM/L4CPSahp/TPNzXUPBz0uZy6RxEJ6iTuW9d5of3/3Cm/wBYSuYg/r6emhkZERdyKb/ZPL7b5f1ZsU4lVHCPX3anZ538UJ92XIRaD1a9duaVy/Ydvl1r6I/BeptwrRi1jFGwAAAABJRU5ErkJggg==">
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="lib/MarkerCluster.css">
+  <link rel="stylesheet" href="lib/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dao-auth.css">
+  <link rel="stylesheet" href="dao-v2.css">
+  <link rel="stylesheet" href="td-dashboard.css">
+</head>
+<body>
+  <div id="daoAuth" class="dao-auth">
+    <div class="dao-auth-card">
+      <div class="dao-emblem">✦ ĐẢO TỰ DO ✦</div>
+      <div class="dao-subtitle">SCUM UNIVERSAL MINIMAP</div>
+      <h1>Xác minh nhân vật</h1>
+      <p class="dao-description">Liên kết tài khoản SCUM để sử dụng bản đồ thời gian thực.</p>
+      <form id="daoRequestForm">
+        <label for="daoSteamId">STEAMID64</label>
+        <input id="daoSteamId" inputmode="numeric" maxlength="17" autocomplete="off" placeholder="7656119XXXXXXXXXX" required>
+        <button id="daoRequestBtn" type="submit">Lấy mã xác minh trong game →</button>
+      </form>
+      <form id="daoVerifyForm" hidden>
+        <div class="dao-hud-hint">Mã 6 số đã được gửi lên HUD trong SCUM. Mã có hiệu lực 5 phút.</div>
+        <label for="daoCode">MÃ XÁC MINH</label>
+        <input id="daoCode" inputmode="numeric" maxlength="6" pattern="[0-9]{6}" autocomplete="one-time-code" placeholder="••••••" required>
+        <button id="daoVerifyBtn" type="submit">Xác minh & mở MiniMap →</button>
+        <button type="button" id="daoBackBtn" class="dao-secondary">Quay lại</button>
+      </form>
+      <p id="daoAuthMessage" class="dao-message" role="status" aria-live="polite"></p>
+      <div class="dao-credit">Được phát triển bởi <strong>team Anh3</strong></div>
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class="td-brand"><div class="td-brand-mark">◈</div><div><strong>ĐẢO TỰ DO</strong><small>SCUM COMMUNITY</small></div></div>
+    <nav class="td-navigation" aria-label="Điều hướng chính">
+      <button data-td-page="home">⌂ <span>Trang chủ</span></button>
+      <button data-td-page="server">▤ <span>Thông tin server</span></button>
+      <button data-td-page="minimap" class="active">▣ <span>MiniMap</span></button>
+      <button data-td-page="waypoint">♧ <span>Waypoint</span></button>
+      <button data-td-page="guide">▤ <span>Cẩm nang SCUM</span></button>
+      <button data-td-page="settings">⚙ <span>Cài đặt chung</span></button>
+    </nav>
+    <div class="td-sidebar-spacer"></div>
+    <button class="td-legacy-toggle" id="tdLegacyToggle">☷ Công cụ bản đồ nâng cao</button>
+    <div id="tdLegacyControls">
+    <div class="sidebar-title">
+      <span class="brand">ĐẢO TỰ DO</span>
+      <span id="versionBadge" class="version-badge">v0.7.8</span>
+      <a id="updateLink" class="update-link" href="#" style="display:none" data-i18n="update.available">Update verfügbar</a>
+    </div>
+
+    <div class="status-row">
+      <div id="status" data-i18n="status.ready">Bereit</div>
+      <button id="toggleCoordsBtn" class="icon-btn active" title="X/Y Koordinaten anzeigen/ausblenden">XY</button>
+    </div>
+    <div class="scum-status-row">
+      <div id="scumStatus" class="scum-status running">SCUM läuft</div>
+      <button id="scumWindowPickerBtn" class="icon-btn" title="SCUM-Fenster manuell wählen (Debug)"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></button>
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <div class="section">
+      <div class="section-header collapsible" id="livemapSectionHeader">
+        <h3><svg class="collapse-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span class="section-title-icon"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span> <span data-i18n="sidebar.livemap">Live-Map / Overlay</span></h3>
+      </div>
+      <div id="livemapSectionBody">
+      <div class="button-row">
+        <button id="toggleLiveTracking" style="width:100%" data-i18n="live_tracking.start">Live-Tracking starten</button>
+        <div id="trackingPauseState" class="tracking-state is-idle">Gestoppt · F8 startet</div>
+      </div>
+      <div class="button-row">
+        <button id="openOverlay" data-i18n="overlay.open" data-i18n-title="overlay.open" title="Overlay öffnen">Overlay öffnen</button>
+      </div>
+      <div style="height:6px"></div>
+      <div class="button-row overlay-actions">
+        <button id="lockOverlay" class="unlocked" data-i18n-title="overlay.lock" title="Overlay sperren / Klick-durch"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></button>
+        <button id="closeOverlay" data-i18n-title="overlay.close" title="Overlay schließen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        <button id="resetOverlayPosition" data-i18n-title="overlay.reset_position" title="Overlay-Position zurücksetzen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></button>
+      </div>
+      <div style="height:6px"></div>
+      <label class="url-label" data-i18n="livemap.url_label">URL für OBS/Browser:</label>
+      <div class="url-row">
+        <input id="livemapUrl" type="text" value="" readonly>
+        <button id="copyLivemapUrl" data-i18n-title="livemap.copy_url" title="URL kopieren"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+      </div>
+      <div style="height:6px"></div>
+      <div class="button-row">
+        <button id="downloadHiresBtn" data-i18n-title="map.hires_tiles_title" title="Hochauflösende Karten-Tiles herunterladen"><svg id="hiresBtnIcon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> <span id="hiresBtnText" data-i18n="map.hires_tiles">Hi-Res Tiles</span></button>
+      </div>
+      <div id="hiresStatus" style="font-size:11px;color:#888;margin-top:4px"></div>
+      <div id="hiresProgressBar" class="progress-bar" style="display:none">
+        <div id="hiresProgressFill" class="progress-fill"></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header collapsible" id="routesSectionHeader">
+        <h3><svg class="collapse-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span class="section-title-icon"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19c6 0 3-14 9-14"/></svg></span> <span data-i18n="sidebar.routes">Routen</span></h3>
+      </div>
+      <div id="routesSectionBody">
+        <div class="poi-add-buttons">
+          <button id="addRouteBtn" data-i18n="routes.new" data-i18n-title="routes.new" title="Neue Route"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> <span data-i18n="routes.new">Neue Route</span></button>
+        </div>
+        <div id="routeList"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header collapsible" id="poisSectionHeader">
+        <h3><svg class="collapse-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg><span class="section-title-icon"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> <span data-i18n="sidebar.pois">POIs</span></h3>
+      </div>
+      <div id="poisSectionBody">
+      <div class="poi-filter-row">
+        <input id="poiSearchInput" type="search" autocomplete="off" data-i18n-placeholder="poi.search_placeholder" placeholder="Name oder Kategorie suchen" title="POIs nach Name oder Kategorie filtern">
+        <select id="poiCategoryFilter"><option value="" data-i18n="poi.all_categories">Alle Kategorien</option></select>
+      </div>
+      <div class="poi-add-buttons">
+        <button id="addPoiFromLocation" data-i18n-title="poi.from_location_title" title="Aktuelle Position als POI"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg> <span data-i18n="poi.from_location">Position</span></button>
+        <button id="addPoiFromClipboard" data-i18n-title="poi.import_title" title="POI aus Zwischenablage importieren"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> <span data-i18n="poi.import">Import</span></button>
+      </div>
+      <p class="hint" data-i18n="poi.right_click_hint">Oder Rechtsklick auf die Karte.</p>
+      <div id="poiList"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div id="mapShell">
+    <main id="tdDashboard" class="td-dashboard">
+      <header class="td-header"><div class="td-header-title"><div class="td-shield">◈</div><div><div class="td-kicker">SCUM · MINIMAP</div><h1 id="tdPageTitle">Cấu hình MiniMap</h1><p>Bản đồ sinh tồn theo thời gian thực · Định vị · Waypoint · POI</p></div></div><div class="td-server"><span class="td-online">●</span> Server Đảo Tự Do <small>Đã kết nối Launcher</small></div></header>
+      <div class="td-workspace" id="tdMinimapPage">
+        <section class="td-primary">
+          <div class="td-tabs"><button data-td-tab="display" class="active">▣ Hiển thị</button><button data-td-tab="features">⚙ Tính năng</button><button data-td-tab="pois">♧ Địa điểm (POI)</button><button data-td-tab="advanced">⚙ Nâng cao</button></div>
+          <div class="td-tab-content" data-td-panel="display">
+            <div class="td-card"><div class="td-card-head"><div><h2>▣ Tổng quan</h2><p>Bật MiniMap và tùy chỉnh cách hiển thị trong game.</p></div><label class="td-switch"><input id="tdEnabled" type="checkbox" checked><span></span><b>Bật MiniMap</b></label></div>
+              <div class="td-sliders"><label>Kích thước <output id="tdSizeValue">260 px</output><input id="tdSize" type="range" min="200" max="600" step="10" value="260"></label><label>Độ trong suốt <output id="tdOpacityValue">92%</output><input id="tdOpacity" type="range" min="20" max="100" value="92"></label><label>Bán kính nhìn <output id="tdRadiusValue">600 m</output><input id="tdRadius" type="range" min="100" max="2000" step="50" value="600"></label></div>
+            </div>
+            <div class="td-card"><div class="td-card-head"><div><h2>◇ Hình dạng & hiển thị</h2><p>Tùy chỉnh giao diện phù hợp phong cách chơi.</p></div></div><div class="td-shapes"><button data-td-shape="circle" class="active"><i class="td-shape-circle"></i>Hình tròn</button><button data-td-shape="square"><i class="td-shape-square"></i>Hình vuông</button><button data-td-shape="rounded"><i class="td-shape-rounded"></i>Bo góc</button></div></div>
+            <div class="td-card"><div class="td-card-head"><div><h2>♧ Hành vi trong game</h2><p>Tối ưu trải nghiệm, không cản trở thao tác.</p></div></div><div class="td-toggle-grid"><label><input id="tdClickThrough" type="checkbox" checked><span>Cho chuột xuyên qua MiniMap<small>Không chặn chuột khi chơi game</small></span></label><label><input id="tdRotate" type="checkbox"><span>Xoay theo hướng nhìn<small>Sử dụng yaw từ API SCUM</small></span></label><label><input id="tdAutoHide" type="checkbox" disabled><span>Tự ẩn khi mở kho đồ<small>Cần tín hiệu trạng thái UI từ SCUM</small></span></label><label><input id="tdGrid" type="checkbox" checked><span>Hiện lưới sector<small>Hiển thị khu vực bản đồ</small></span></label><label><input id="tdAlwaysTop" type="checkbox" checked disabled><span>Ghim trên cùng<small>Được bật ở cửa sổ overlay</small></span></label><label><input id="tdQuickInfo" type="checkbox" checked><span>Thông tin nhanh<small>Tọa độ và trạng thái vị trí</small></span></label></div></div>
+          </div>
+          <div class="td-tab-content" data-td-panel="features" hidden><div class="td-card"><h2>Tính năng khi chơi</h2><p>Chế độ an toàn mặc định là chuột đi xuyên qua MiniMap. Chọn “Cho phép kéo” để di chuyển overlay, sau đó khóa lại.</p><div class="td-action-row"><button id="tdUnlock">Cho phép kéo MiniMap</button><button id="tdLock" class="td-accent">Khóa chuột xuyên qua</button></div><p class="td-muted">Tự ẩn khi mở kho đồ chưa thể bật chính xác nếu game không cung cấp trạng thái menu. Dùng nút Ẩn/Hiện thủ công.</p><button id="tdToggleOverlay">Ẩn / Hiện overlay</button></div></div>
+          <div class="td-tab-content" data-td-panel="pois" hidden><div class="td-card"><h2>Địa điểm & POI</h2><p>Dùng các nhóm POI đã có trong bản đồ gốc. Chọn “Mở bản đồ lớn” để lọc và đặt waypoint trên bản đồ.</p><button class="td-accent" data-td-action="map">Mở bản đồ & POI</button><p class="td-muted">Chưa nhập danh sách tên địa điểm mới: không tạo POI giả.</p></div></div>
+          <div class="td-tab-content" data-td-panel="advanced" hidden><div class="td-card"><h2>Cấu hình nâng cao</h2><p>Điều chỉnh các thiết lập kỹ thuật của Launcher hiện có.</p><div class="td-action-row"><button id="tdOriginalSettings">Mở cài đặt gốc</button><button id="tdResetOverlay">Đặt lại vị trí overlay</button><button data-td-action="map">Mở bản đồ lớn</button></div><p class="td-muted">F8/F9/M trong bản thiết kế là gợi ý, không tự nhận là phím nóng đang hoạt động. Hãy thiết lập trong phần cài đặt gốc.</p></div></div>
+        </section>
+        <aside class="td-aside"><div class="td-card td-preview-card"><div class="td-preview" id="tdPreview"><div class="td-compass"><span>N</span><span>E</span><span>S</span><span>W</span><b id="tdPreviewArrow">➤</b></div></div><div class="td-preview-label">Xem trước MiniMap · ảnh nền SCUM</div></div><div class="td-card"><h2>⌨ Điều khiển nhanh</h2><div class="td-shortcut"><span>Mở bản đồ lớn</span><button data-td-action="map">Mở</button></div><div class="td-shortcut"><span>Bật MiniMap</span><button id="tdAsideOpen">Bật</button></div><div class="td-shortcut"><span>Khóa / mở khóa chuột</span><button id="tdAsideLock">Khóa</button></div><div class="td-shortcut"><span>Chỉnh phím nóng</span><button id="tdAsideSettings">Cài đặt</button></div></div><div class="td-action-row td-bottom-actions"><button class="td-accent" data-td-action="map">▣ Mở bản đồ lớn</button><button id="tdAsideWaypoint">♧ Waypoint</button></div></aside>
+      </div>
+      <section class="td-alt-page" id="tdAltPage" hidden><div class="td-card"><h2 id="tdAltHeading">Bản đồ</h2><p id="tdAltDescription"></p><button class="td-accent" data-td-action="map">Mở bản đồ lớn</button><button data-td-page="minimap">Quay lại MiniMap</button></div></section>
+      <footer class="td-footer">ĐẢO TỰ DO · Phát triển bởi team Anh3 <span id="tdFeedback" role="status"></span></footer>
+    </main>
+    <div class="dao-topbar">
+      <div><div class="dao-eyebrow">SCUM • MINIMAP / TACTICAL NAVIGATION</div><h1>Bản đồ & MiniMap</h1><p>Định vị thời gian thực · Waypoint · POI · Điều hướng</p></div>
+      <div class="dao-top-actions"><span class="dao-live"><span class="dao-dot"></span> ĐẢO TỰ DO</span><button id="daoOpenSettings" type="button">⚙ Cấu hình</button><button id="daoOpenOverlay" type="button">◉ Mở MiniMap</button></div>
+    </div>
+    <div id="map"></div>
+    <div id="mapControls">
+      <button id="mapZoomOut" data-i18n-title="map.zoom.out" title="Herauszoomen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <span id="mapZoomLabel">100%</span>
+      <button id="mapZoomIn" data-i18n-title="map.zoom.in" title="Hineinzoomen">+</button>
+      <button id="mapFollowBtn" data-i18n-title="map.follow" title="Aktueller Position folgen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" stroke-dasharray="2,3"/></svg></button>
+      <button id="mapCenterBtn" data-i18n-title="map.center" title="Auf aktuelle Position zentrieren"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></button>
+      <button id="mapFitBtn" data-i18n-title="map.fit" title="Gesamte Karte anzeigen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 4 20 10 20"/><polyline points="20 10 20 4 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+      <button id="mapClusterToggle" data-i18n-title="map.cluster" title="POI-Clustering an/aus"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></button>
+      <button id="mapMeasureBtn" data-i18n-title="map.measure" title="Messmodus an/aus">M</button>
+      <button id="mapNavBtn" data-i18n-title="map.navigation" title="Navigation an/aus">N</button>
+      <button id="mapRouteBtn" data-i18n-title="map.route_mode" title="Routenmodus an/aus">R</button>
+    </div>
+
+    <div id="navPanel" class="nav-panel">
+      <h3 data-i18n="nav.title">Navigation</h3>
+      <div class="nav-mode-tabs">
+        <button id="navModeRoute" class="active" data-i18n="nav.tab.route">Route</button>
+        <button id="navModeNav" data-i18n="nav.tab.navigation">Navigation</button>
+      </div>
+      <div class="nav-row" id="navStartRow"><label data-i18n="nav.start">Start</label><span id="navStart">– Rechtsklick setzen</span></div>
+      <div class="nav-row"><label data-i18n="nav.end">Ziel</label><span id="navEnd">– Rechtsklick setzen</span></div>
+      <div class="nav-btns">
+        <button id="navCalcBtn" class="primary" data-i18n="nav.calculate">Route berechnen</button>
+        <button id="navClearBtn" class="danger" data-i18n="nav.clear">Löschen</button>
+      </div>
+      <div class="nav-btns" style="margin-top:4px">
+        <button id="navFollowBtn" class="follow-btn" style="grid-column:1/3" data-i18n="nav.follow">Follow: Spieler-Tracking</button>
+      </div>
+      <div class="nav-info" id="navInfo"></div>
+      <div class="nav-progress" id="navProgress"></div>
+    </div>
+
+    <button id="settingsToggle" class="settings-toggle" data-i18n-title="settings.title" title="Einstellungen"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
+
+    <div id="settingsPanel" class="settings-panel">
+      <div class="settings-header">
+        <h3 data-i18n="settings.title">Einstellungen</h3>
+        <button id="settingsClose" class="icon-btn" data-i18n-title="settings.close" title="Schließen">X</button>
+      </div>
+      <div class="settings-body">
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.tracking">Tracking</h4>
+          <label class="settings-label" data-i18n-title="settings.tracking_interval">
+            <span data-i18n="settings.tracking_interval">Update-Intervall (Sekunden)</span>
+            <input id="settingsTrackingInterval" type="number" min="1" max="300" value="10">
+          </label>
+          <label class="settings-label check"><input id="settingsAutoStartTracking" type="checkbox"> <span data-i18n="settings.auto_start_tracking">Live-Tracking beim Start automatisch starten</span></label>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.overlay">Overlay</h4>
+          <label class="settings-label check"><input id="settingsAutoOpenOverlay" type="checkbox"> <span data-i18n="settings.auto_open_overlay">Overlay beim Start automatisch öffnen</span></label>
+          <label class="settings-label check"><input id="settingsAutoLockOverlay" type="checkbox"> <span data-i18n="settings.auto_lock_overlay">Overlay automatisch sperren (Klick-durch)</span></label>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.navigation">Navigation</h4>
+          <label class="settings-label" data-i18n-title="settings.route_color">
+            <span data-i18n="settings.route_color">Routen-Farbe</span>
+            <div class="color-input-row">
+              <input id="settingsNavRouteColor" type="color" value="#00ffcc" data-default="#00ffcc" style="flex:1; height:32px; background:#222; border:1px solid #444; border-radius:4px; cursor:pointer;">
+              <button id="settingsResetNavRouteColor" type="button" class="reset-color-btn" data-i18n-title="settings.reset_color" title="Zurücksetzen">↺</button>
+            </div>
+          </label>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.poi">Auto-POI</h4>
+          <p class="settings-hint" data-i18n="settings.auto_poi_hint">Der Auto-POI-Hotkey macht automatisch einen Screenshot, setzt einen POI an deiner aktuellen Position und speichert ihn. Hier legst du Kategorie, Namenspräfix und Farbe fest.</p>
+          <div class="settings-row">
+            <label class="settings-label" data-i18n="settings.poi_hotkey">POI-Hotkey</label>
+            <div class="hotkey-input-row">
+              <input id="settingsPoiHotkey" type="text" readonly value="F9">
+              <button id="settingsRecordPoiHotkey" type="button" data-i18n="settings.record_hotkey">Aufzeichnen</button>
+            </div>
+          </div>
+          <label class="settings-label check"><input id="settingsAutoPoiUseSector" type="checkbox" checked> <span data-i18n="settings.auto_poi_use_sector">Sektorkategorie verwenden</span></label>
+          <label class="settings-label" data-i18n-title="settings.auto_poi_category">
+            <span data-i18n="settings.auto_poi_category">Eigene Kategorie</span>
+            <input id="settingsAutoPoiCategory" type="text" data-i18n-placeholder="settings.auto_poi_category_placeholder" placeholder="z. B. Auto-POI" style="width:100%; margin-top:6px;">
+          </label>
+          <label class="settings-label" data-i18n-title="settings.auto_poi_prefix">
+            <span data-i18n="settings.auto_poi_prefix">Namenspräfix</span>
+            <input id="settingsAutoPoiPrefix" type="text" value="POI" style="width:100%; margin-top:6px;">
+          </label>
+          <label class="settings-label" data-i18n-title="settings.auto_poi_color">
+            <span data-i18n="settings.auto_poi_color">Auto-POI-Farbe</span>
+            <div class="color-input-row">
+              <input id="settingsAutoPoiColor" type="color" value="#ff8800" data-default="#ff8800" style="flex:1; height:32px; background:#222; border:1px solid #444; border-radius:4px; cursor:pointer;">
+              <button id="settingsResetAutoPoiColor" type="button" class="reset-color-btn" data-i18n-title="settings.reset_color" title="Zurücksetzen">↺</button>
+            </div>
+          </label>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.hotkeys">Hotkeys</h4>
+          <div class="settings-row">
+            <label class="settings-label" data-i18n="settings.pause_hotkey">Pause-Hotkey</label>
+            <div class="hotkey-input-row">
+              <input id="settingsPauseHotkey" type="text" readonly value="F8">
+              <button id="settingsRecordPauseHotkey" type="button" data-i18n="settings.record_hotkey">Aufzeichnen</button>
+            </div>
+            <p class="settings-hint" data-i18n="settings.pause_hotkey_hint">Pausiert und setzt das Live-Tracking fort. Während der Pause geht kein Strg+C an SCUM, die Route bleibt erhalten. Standard: F8.</p>
+          </div>
+          <div class="settings-row">
+            <label class="settings-label" data-i18n="settings.bigmap_hotkey">Bigmap-Hotkey</label>
+            <div class="hotkey-input-row">
+              <input id="settingsBigmapHotkey" type="text" readonly value="AltGr+M">
+              <button id="settingsRecordBigmapHotkey" type="button" data-i18n="settings.record_hotkey">Aufzeichnen</button>
+            </div>
+          </div>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.language">Sprache</h4>
+          <label class="settings-label" data-i18n-title="settings.language">
+            <span data-i18n="settings.language">Anzeigesprache</span>
+            <select id="settingsLanguage" style="width:100%; margin-top:6px; padding:6px; background:#222; border:1px solid #444; border-radius:4px; color:#e2e2e2;">
+            </select>
+          </label>
+          <button id="languagePacksBtn" type="button" style="width:100%; margin-top:8px" data-i18n="language_packs.manage">Weitere Sprachpakete</button>
+        </div>
+        <div class="settings-section">
+          <h4 data-i18n="settings.section.backup">Backup</h4>
+          <p class="settings-hint" data-i18n="settings.backup_hint">Routen, POIs und Einstellungen jeweils einzeln als Datei sichern oder aus einer Backup-Datei wiederherstellen. Zusätzlich legt die App beim Start und spätestens alle 10 Minuten nach Änderungen automatisch eine Kopie von scum_walker_data.json an und behält die letzten 5 Stände.</p>
+          <div class="settings-row backup-row-pois">
+            <div class="backup-line">
+              <span class="backup-label" data-i18n="settings.backup.routes">Routen</span>
+              <select id="backupRouteSelect" data-i18n-title="settings.backup.select_route" title="Route für den Export wählen"><option value="" data-i18n="settings.backup.all_routes">Alle Routen</option></select>
+            </div>
+            <div class="backup-line">
+              <span class="backup-label"></span>
+              <div class="backup-buttons">
+                <button id="backupExportRoutes" type="button" data-i18n="settings.backup.export" data-i18n-title="settings.backup.export_routes" title="Routen exportieren">Exportieren</button>
+                <button id="backupImportRoutes" type="button" data-i18n="settings.backup.import" data-i18n-title="settings.backup.import_routes" title="Routen importieren">Importieren</button>
+              </div>
+            </div>
+          </div>
+          <div class="settings-row backup-row-pois">
+            <div class="backup-line">
+              <span class="backup-label" data-i18n="settings.backup.pois">POIs</span>
+              <select id="backupPoiCategorySelect" data-i18n-title="settings.backup.select_category" title="Kategorie für den Export wählen"><option value="" data-i18n="settings.backup.all_categories">Alle Kategorien</option></select>
+            </div>
+            <div class="backup-line">
+              <span class="backup-label"></span>
+              <label class="backup-checkbox" data-i18n-title="settings.backup.with_images_title" title="POI-Screenshots mit exportieren (ZIP-Datei)">
+                <input type="checkbox" id="backupPoiIncludeImages">
+                <span data-i18n="settings.backup.with_images">mit Bildern</span>
+              </label>
+            </div>
+            <div class="backup-line">
+              <span class="backup-label"></span>
+              <div class="backup-buttons">
+                <button id="backupExportPois" type="button" data-i18n="settings.backup.export" data-i18n-title="settings.backup.export_pois" title="POIs (ggf. nur gewählte Kategorie) exportieren">Exportieren</button>
+                <button id="backupImportPois" type="button" data-i18n="settings.backup.import" data-i18n-title="settings.backup.import_pois" title="POIs importieren (JSON oder ZIP)">Importieren</button>
+              </div>
+            </div>
+          </div>
+          <div class="settings-row backup-row">
+            <span class="backup-label" data-i18n="settings.backup.settings">Einstellungen</span>
+            <div class="backup-buttons">
+              <button id="backupExportSettings" type="button" data-i18n="settings.backup.export" data-i18n-title="settings.backup.export_settings" title="Einstellungen exportieren">Exportieren</button>
+              <button id="backupImportSettings" type="button" data-i18n="settings.backup.import" data-i18n-title="settings.backup.import_settings" title="Einstellungen importieren">Importieren</button>
+            </div>
+          </div>
+          <div class="settings-row backup-row-pois">
+            <div class="backup-line">
+              <span class="backup-label" data-i18n="settings.backup.app">App Backup</span>
+              <label class="backup-checkbox" data-i18n-title="settings.backup.with_poi_images_title" title="POI-Screenshots mit ins Backup packen (größere Datei)">
+                <input type="checkbox" id="backupAppIncludeImages">
+                <span data-i18n="settings.backup.with_poi_images">mit POI-Bildern</span>
+              </label>
+            </div>
+            <div class="backup-line">
+              <span class="backup-label"></span>
+              <div class="backup-buttons">
+                <button id="backupExportApp" type="button" data-i18n="settings.backup.export" data-i18n-title="settings.backup.export_app" title="Komplettes App-Backup als ZIP exportieren">Exportieren</button>
+                <button id="backupImportApp" type="button" data-i18n="settings.backup.import" data-i18n-title="settings.backup.import_app" title="App-Backup aus ZIP importieren (ersetzt alle Daten)">Importieren</button>
+              </div>
+            </div>
+          </div>
+          <div id="backupStatus" style="color:#888; font-size:12px; margin-top:6px;"></div>
+        </div>
+        <div class="settings-actions">
+          <button id="settingsSave" class="primary" data-i18n="settings.save">Speichern</button>
+          <span id="settingsSaveStatus" style="color:#888; font-size:12px; margin-left:8px;"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="languagePacksDialog" class="dialog">
+      <div class="dialog-content language-packs-content">
+        <div class="language-packs-header">
+          <h3 data-i18n="language_packs.title">Sprachpakete</h3>
+          <button id="languagePacksClose" class="language-packs-close" type="button" data-i18n-title="settings.close" title="Schließen"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+        </div>
+        <p class="language-packs-hint" data-i18n="language_packs.hint">Zusätzliche Sprachen herunterladen oder aktualisieren.</p>
+        <div id="languagePacksList" class="language-packs-list"></div>
+        <div id="languagePacksStatus" class="language-packs-status"></div>
+      </div>
+    </div>
+
+    <div id="poiDialog" class="dialog">
+      <div class="dialog-content">
+        <h3 id="poiDialogTitle">POI hinzufügen</h3>
+        <input type="text" id="poiLabel" data-i18n-placeholder="poi.name_placeholder" placeholder="Name" maxlength="64">
+        <label for="poiCategorySelect" class="dialog-label" data-i18n="poi.category">Kategorie</label>
+        <select id="poiCategorySelect"></select>
+        <input type="text" id="poiCategoryInput" data-i18n-placeholder="poi.new_category_placeholder" placeholder="Neue Kategorie" style="display:none" maxlength="32">
+        <div class="custom-color-row">
+          <input type="color" id="poiColorPicker" value="#ff44d3">
+        </div>
+        <div id="poiColors" class="color-grid"></div>
+        <div class="dialog-actions">
+          <button id="poiCancel" data-i18n="poi.cancel">Abbrechen</button>
+          <button id="poiSave" data-i18n="poi.save">Speichern</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="routeDialog" class="dialog">
+    <div class="dialog-content">
+      <h3>Neue Route</h3>
+      <input type="text" id="routeNameInput" placeholder="Name der Route" maxlength="64">
+      <div class="custom-color-row">
+        <input type="color" id="routeColorPicker" value="#00ffcc">
+      </div>
+      <div id="routeColors" class="color-grid"></div>
+      <div class="dialog-actions">
+        <button id="routeCancel">Abbrechen</button>
+        <button id="routeSave">Erstellen</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="clipboardDialog" class="dialog">
+    <div class="dialog-content">
+      <h3>POI Import</h3>
+      <p class="hint" style="margin-bottom:8px;">POI JSON, Marker-Array oder SCUM-Koordinaten einfügen:</p>
+      <textarea id="clipboardInput" rows="6" placeholder='{"label":"Bunker","x":123456,"y":-789012,"color":"#ff44d3","category":"Bunker"}' style="width:100%;background:#1a1a1a;color:#ddd;border:1px solid #444;border-radius:4px;padding:8px;font-size:12px;font-family:monospace;resize:vertical;"></textarea>
+      <div class="dialog-actions">
+        <button id="clipboardPasteBtn" title="Inhalt aus Zwischenablage einfügen"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Einfügen</button>
+        <button id="clipboardCancel">Abbrechen</button>
+        <button id="clipboardParse">Importieren</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="scumWindowPickerDialog" class="dialog">
+    <div class="dialog-content">
+      <h3>SCUM-Fenster manuell wählen</h3>
+      <p class="hint" style="margin-bottom:8px;">Falls SCUM nicht automatisch erkannt wird, hier das richtige Fenster/Prozess auswählen.</p>
+      <div id="scumWindowList" class="window-picker-list"></div>
+      <div class="dialog-actions">
+        <button id="scumWindowPickerAuto">Automatisch erkennen</button>
+        <button id="scumWindowPickerClose">Schließen</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="imageDialog" class="dialog">
+    <div class="dialog-content image-dialog-content">
+      <h3 id="imageDialogTitle">POI Bild</h3>
+      <img id="imageDialogImg" alt="POI Bild">
+      <div class="dialog-actions">
+        <button id="imageDialogClose"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="lib/leaflet.markercluster.js"></script>
+  <script src="i18n/i18n.js?v=4"></script>
+  <script src="navigation.js?v=1"></script>
+  <script src="app.js?v=5"></script>
+  <script src="dao-auth.js?v=1"></script>
+  <script src="td-dashboard.js?v=1"></script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+ document.getElementById('daoOpenSettings')?.addEventListener('click', () => document.getElementById('settingsToggle')?.click());
+ document.getElementById('daoOpenOverlay')?.addEventListener('click', () => document.getElementById('openOverlay')?.click());
+});
+</script>
+</body>
+</html>
